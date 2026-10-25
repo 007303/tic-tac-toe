@@ -1,0 +1,169 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8fafc;
+    margin: 0;
+    padding: 20px;
+    color: #0f172a;
+  }
+  
+  .game-container {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 12px;
+  }
+  
+  .mode-selection {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .mode-selection button {
+    padding: 8px 16px;
+    border: 1px solid #cbd5e1;
+    background: white;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  
+  .mode-selection button.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+  }
+  
+  .status-banner {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    min-height: 28px;
+  }
+  
+  .win-msg {
+    color: #16a34a;
+  }
+  
+  .draw-msg {
+    color: #d97706;
+  }
+  
+  .main-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 8px;
+    justify-content: center;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+  }
+  
+  .cell:hover:not(:disabled) {
+    background: #f1f5f9;
+  }
+  
+  .cell.highlight {
+    background-color: #bbf7d0;
+    border-color: #22c55e;
+    color: #15803d;
+  }
+  
+  .controls {
+    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .controls button, .small-btn {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    background: white;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .right-panel {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .scoreboard {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .scoreboard h3, .history h3 {
+    margin: 0 0 10px 0;
+  }
+  
+  .score-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  
+  .table-wrapper {
+    max-height: 220px;
+    overflow-y: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background: white;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  
+  th, td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #f1f5f9;
+    text-align: left;
+  }
+  
+  th {
+    background: #f8fafc;
+    position: sticky;
+    top: 0;
+  }
+  
+  .empty-text {
+    text-align: center;
+    color: #94a3b8;
+  }
